@@ -9,15 +9,15 @@
         } else{ 
             computerScore++;
         }
-        results.innerHTML = "Player's score is: " + playerScore);
-        results.innerHTML = "Computer's score is: " + computerScore);
+        ("Player's score is: " + playerScore);
+        ("Computer's score is: " + computerScore);
         round++;
 
     } while (round < 5);
 
     if (playerScore > computerScore){
-        results.innerHTML = "Congratulations, you win!");
-    } else results.innerHTML = "Sorry, you lose!");
+        ("Congratulations, you win!");
+    } else ("Sorry, you lose!");
 }
 
 function getPlayerChoice(){
@@ -50,28 +50,28 @@ buttons.forEach( function(button)  {
 function playRound(playerChoice, computerChoice){
     let winner = 'Computer';
     if(computerChoice == playerChoice){
-        results.innerHTML = "Draw. Please select again";
+        ("Draw. Please select again");
     } else{
         switch(computerChoice){
         
             case 'ROCK':
                 if (playerChoice == 'PAPER'){
-                    results.innerHTML = "You win! Paper beats Rock.";
+                    ("You win! Paper beats Rock.");
                     winner = 'Player';
-                } else { results.innerHTML = "You lose! Rock beats Scissors.";
+                } else { ("You lose! Rock beats Scissors.");
             }
                 break;
             case 'PAPER':
                 if (playerChoice == 'SCISSORS'){
-                    results.innerHTML = "You win! Scissors beats Paper.";
+                    ("You win! Scissors beats Paper.");
                     winner = 'Player';
-                } else { results.innerHTML = "You lose! Paper beats Rock.";}   
+                } else { ("You lose! Paper beats Rock.");}   
                 break;
             case 'SCISSORS':
                 if (playerChoice == 'ROCK'){
-                    results.innerHTML = "You win! Rock beats Scissors.";
+                    ("You win! Rock beats Scissors.");
                     winner = 'Player';
-                } else { results.innerHTML = "You lose! Scissors beats Paper.";} 
+                } else { ("You lose! Scissors beats Paper.");} 
                 break;
 
         }
